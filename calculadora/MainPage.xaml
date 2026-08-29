@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculadora.MainPage">
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Total na conta"
+        />
+        <Entry 
+            x:Name="billInput" 
+            Placeholder="Insira o valor" 
+            Keyboard="Numeric" 
+            TextChanged="OnBillChanged"
+        />
+        <Label 
+            Text="Tip"
+        />
+        <Label x:Name="tipOutput" Text="0.00" />
+
+        <Label 
+            Text="Total"
+        />
+        <Label 
+            x:Name="ValorTotaldaCompraLabel" 
+            Text="0.00"
+            SemanticProperties.Description="Valor Total da Conta"
+        />
+
+        <Label 
+            Text="Porcentagem de gorjeta"
+            SemanticProperties.Description="Porcentagem da Gorjeta"
+         />
+        
+
+        <Label 
+            x:Name="tipPercent" 
+            Text="15%"/>
+
+        <Slider 
+            x:Name="PorcentagemGorjetaSlider" 
+            Value="15"
+            Minimum="0" 
+            Maximum="100" 
+            SemanticProperties.Description="Porcentagem da Gorjeta Slider"
+            ValueChanged="PorcentagemGorjetaSlider_ValueChanged"/>
+
+        <Button 
+            x:Name="Gorjeta15PorcentoButton"    
+            Text="15%"
+            Clicked="Gorjeta15PorcentoButton_Clicked"/>
+        
+        <Button 
+            x:Name="Gorjeta20PorcentoButton"
+            Text="20%" 
+            Clicked="Gorjeta20PorcentoButton_Clicked" />
+
+        <Button 
+            x:Name="ArredondarParaBaixoButton" 
+            Text="Arredondar Para Baixo" 
+            Clicked="ArredondarParaBaixoButton_Clicked"
+        />
+        <Button 
+            x:Name="ArredondarParaCimaButton"   
+            Text="Arredondar Para Cima"
+            Clicked="ArredondarParaCimaButton_Clicked"    
+        />
+    </VerticalStackLayout>
+
+
+
+</ContentPage>
