@@ -8,41 +8,31 @@
             Text="Total na conta"
         />
         <Entry 
-            x:Name="billInput" 
+            x:Name="ContaEntry"
             Placeholder="Insira o valor" 
-            Keyboard="Numeric" 
-            TextChanged="OnBillChanged"
         />
         <Label 
-            Text="Tip"
+            Text="Valor da Gorjeta"
         />
-        <Label x:Name="tipOutput" Text="0.00" />
+        <Label x:Name="GorjetaLabel" Text="0.00" />
 
         <Label 
             Text="Total"
         />
+        <Label x:Name="ValorTotalLabel" Text="0.00" />
+
+        <Label x:Name="ValorTotalTeste" Text="0.00" />
+
         <Label 
-            x:Name="ValorTotaldaCompraLabel" 
-            Text="0.00"
-            SemanticProperties.Description="Valor Total da Conta"
+            x:Name="PorcentagemGorjetaLabel" 
+            Text="15%"
         />
-
-        <Label 
-            Text="Porcentagem de gorjeta"
-            SemanticProperties.Description="Porcentagem da Gorjeta"
-         />
-        
-
-        <Label 
-            x:Name="tipPercent" 
-            Text="15%"/>
 
         <Slider 
             x:Name="PorcentagemGorjetaSlider" 
             Value="15"
             Minimum="0" 
             Maximum="100" 
-            SemanticProperties.Description="Porcentagem da Gorjeta Slider"
             ValueChanged="PorcentagemGorjetaSlider_ValueChanged"/>
 
         <Button 
@@ -55,7 +45,7 @@
             Text="20%" 
             Clicked="Gorjeta20PorcentoButton_Clicked" />
 
-        <Button 
+<Button 
             x:Name="ArredondarParaBaixoButton" 
             Text="Arredondar Para Baixo" 
             Clicked="ArredondarParaBaixoButton_Clicked"
